@@ -9,4 +9,9 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of :max_run_distance }
     it { should validate_presence_of :estimated_mile_pace }
   end
+
+  describe 'relationships' do
+    it { should have_many :user_runs}
+    it { should have_many(:runs).through(:user_runs)}
+  end
 end
