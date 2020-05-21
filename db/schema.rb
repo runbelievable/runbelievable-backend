@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_224726) do
+ActiveRecord::Schema.define(version: 2020_05_21_213128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "runs", force: :cascade do |t|
+    t.float "distance"
+    t.string "location"
+    t.string "total_time"
+    t.string "average_pace"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_runs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "run_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["run_id"], name: "index_user_runs_on_run_id"
+    t.index ["user_id"], name: "index_user_runs_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -26,4 +44,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_224726) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "user_runs", "runs"
+  add_foreign_key "user_runs", "users"
 end
