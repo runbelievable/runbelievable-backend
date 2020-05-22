@@ -13,6 +13,10 @@ class Api::V1::RunsController < ApplicationController
     render json: RunSerializer.new(Run.update(params[:id], run_params))
   end
 
+  def destroy
+    render json: RunSerializer.new(Run.destroy(params[:id]))
+  end
+
   def create
     run = Run.new(run_params)
     if run.save
