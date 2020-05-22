@@ -15,7 +15,7 @@ class Api::V1::RunsController < ApplicationController
       render json: RunSerializer.new(run), status: 201
     else
       run_message = FailedRun.new(run)
-    #   render json: FailedSerializer.new(run_message), status: 401
+      render json: FailedSerializer.new(run_message), status: 401
     end
   end
 
