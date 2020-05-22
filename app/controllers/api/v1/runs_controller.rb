@@ -9,6 +9,10 @@ class Api::V1::RunsController < ApplicationController
     render json: RunSerializer.new(run)
   end
 
+  def update
+    render json: RunSerializer.new(Run.update(params[:id], run_params))
+  end
+
   def create
     run = Run.new(run_params)
     if run.save
