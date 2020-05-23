@@ -98,5 +98,4 @@ describe "Users API" do
     expect(User.count).to eq(0)
     expect{User.find(user.id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
-
 end
