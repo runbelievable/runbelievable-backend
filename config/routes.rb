@@ -9,6 +9,12 @@ Rails.application.routes.draw do
       put '/users/:user_id/runs/:run_id', to: 'user_runs#update'
       post '/users/:user_id/runs', to: 'user_runs#create'
 
+      get "/runs/:run_id/users", to: 'run_users#index'
+      get "/runs/:run_id/users/:user_id", to: 'run_users#show'
+      delete "/runs/:run_id/users/:user_id", to: 'run_users#destroy'
+      put "/runs/:run_id/users/:user_id", to: 'run_users#update'
+      post "/runs/:run_id/users", to: 'run_users#create'
+
       # scope module: 'users' do
       #   get "/runs", to: "user_runs#index"
       # end
@@ -17,5 +23,4 @@ Rails.application.routes.draw do
       # end
     end
   end
-
 end
