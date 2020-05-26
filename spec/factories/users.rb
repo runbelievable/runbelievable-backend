@@ -1,7 +1,9 @@
 FactoryBot.define do
   factory :user do
-    first_name { Faker::Creature::Dog.name }
+    username { Faker::Creature::Dog.name }
+    first_name { Faker::Creature::Cat.name }
     last_name { Faker::Creature::Dog.name }
+    password { Faker::Creature::Dog.name }
     age { rand(1..100).to_s }
     gender { ['Male', 'Female'].shuffle.pop }
     max_run_distance { rand(1..50) }
