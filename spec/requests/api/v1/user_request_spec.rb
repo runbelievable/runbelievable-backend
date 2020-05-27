@@ -14,7 +14,7 @@ describe "Users API" do
 
     users = JSON.parse(response.body, symbolize_names: true)[:data]
     expect(users.count).to eq(3)
-    expect(users.first[:attributes].count).to eq(6)
+    expect(users.first[:attributes].count).to eq(7)
   end
 
   it "returns empty when there are no users" do
@@ -79,14 +79,20 @@ describe "Users API" do
     expect(json[:attributes].values.join).to eq("[:estimated_mile_pace, [\"can't be blank\"]]")
   end
 
-  xit "can update an existing item" do
-    id = create(:user).id
+  it "can update an existing user" do
+    user1 = create(:user)
     previous_name = User.last.first_name
-    user_params = { first_name: "Alex" }
+    user_params = { first_name: 'Alex',
+                   last_name: user1.last_name,
+                   username: user1.username,
+                   password: user1.password,
+                   gender: user1.gender,
+                   age: user1.age,
+                   estimated_mile_pace: user1.estimated_mile_pace,
+                   max_run_distance: user1.max_run_distance}
 
-    put "/api/v1/users/#{id}", params: user_params
-    user = User.find_by(id: id)
-
+    put "/api/v1/users/#{user1.id}", params: user_params
+    user = User.find_by(id: user1.id)
     expect(response).to be_successful
     expect(user.first_name).to_not eq(previous_name)
     expect(user.first_name).to eq("Alex")
