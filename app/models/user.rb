@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates_presence_of :gender
   validates_presence_of :max_run_distance
   validates_presence_of :estimated_mile_pace
+  validates_presence_of :location
 
   has_secure_password
 

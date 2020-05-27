@@ -8,6 +8,7 @@ RSpec.describe 'User registration endpoint' do
                                     age: "99",
                                     username: "fun",
                                     password: "fun2",
+                                    location: 'Denver',
                                     gender: "man",
                                     max_run_distance: 5,
                                     estimated_mile_pace: "08:00"}
@@ -23,6 +24,7 @@ RSpec.describe 'User registration endpoint' do
     post '/api/v1/users', params: { first_name: "john",
                                     last_name: "brown",
                                     age: "99",
+                                    location: 'Denver',
                                     username: "fun",
                                     password: "fun2",
                                     gender: "man",
@@ -37,7 +39,7 @@ RSpec.describe 'User registration endpoint' do
   it 'existing user can login' do
 
     user = create(:user, username: "timmy", password: "tim")
-    
+
     post '/api/v1/login', params: {username: user.username, password: user.password}
 
     expect(response).to be_successful
@@ -49,7 +51,7 @@ RSpec.describe 'User registration endpoint' do
   it 'existing user cant login with bad credentials' do
 
     user = create(:user, username: "timmy", password: "tim")
-    
+
     post '/api/v1/login', params: {username: user.username, password: "hi"}
 
     expect(response).to_not be_successful
@@ -60,7 +62,7 @@ RSpec.describe 'User registration endpoint' do
   it 'existing user with session can log out ' do
 
     user = create(:user, username: "timmy", password: "tim")
-    
+
     post '/api/v1/login', params: {username: user.username, password: user.password}
 
     expect(response).to be_successful
