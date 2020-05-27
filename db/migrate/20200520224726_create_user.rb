@@ -9,6 +9,7 @@ class CreateUser < ActiveRecord::Migration[5.2]
       t.string :gender
       t.integer :max_run_distance
       t.string :estimated_mile_pace
+      t.string :location
 
       t.timestamps
     end

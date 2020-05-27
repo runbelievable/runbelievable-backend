@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_05_21_213128) do
     t.string "gender"
     t.integer "max_run_distance"
     t.string "estimated_mile_pace"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

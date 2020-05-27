@@ -19,7 +19,7 @@ describe 'users runs API' do
 
     expect(response).to be_successful
     expect(users.count).to eq(2)
-    expect(users[0][:attributes].count).to eq(7)
+    expect(users[0][:attributes].count).to eq(8)
   end
 
   it "can find a specifc user by a run's id" do
@@ -42,6 +42,7 @@ describe 'users runs API' do
     expect(user[:attributes][:gender]).to eq(user1.gender)
     expect(user[:attributes][:max_run_distance]).to eq(user1.max_run_distance)
     expect(user[:attributes][:estimated_mile_pace]).to eq(user1.estimated_mile_pace)
+    expect(user[:attributes][:location]).to eq(user1.location)
   end
 
   it "can delete a run's user by it's id" do
@@ -68,6 +69,7 @@ describe 'users runs API' do
     previous_user_name = run.users.first.first_name
     user_params = { first_name: 'Alex',
                    last_name: user1.last_name,
+                   location: user1.location,
                    username: user1.username,
                    password: user1.password,
                    gender: user1.gender,
@@ -87,6 +89,7 @@ describe 'users runs API' do
     run = create(:run)
     user_params = { first_name: 'Alex',
                    last_name: 'Gallant',
+                   location: 'Denver',
                    username: "fun",
                    password: "fun2",
                    gender: "Male",
@@ -105,12 +108,14 @@ describe 'users runs API' do
     expect(user.gender).to eq(user_params[:gender])
     expect(user.max_run_distance).to eq(user_params[:max_run_distance])
     expect(user.estimated_mile_pace).to eq(user_params[:estimated_mile_pace])
+    expect(user.location).to eq(user_params[:location])
   end
 
   it "run cannot create a new user without necessary attributes" do
     run = create(:run)
     user_params = { first_name: 'Alex',
                    last_name: 'Gallant',
+                   location: 'Denver',
                    username: "fun",
                    password: "fun2",
                    gender: "Male",

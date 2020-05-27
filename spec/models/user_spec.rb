@@ -11,6 +11,7 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of :gender }
     it { should validate_presence_of :max_run_distance }
     it { should validate_presence_of :estimated_mile_pace }
+    it { should validate_presence_of :location }
   end
 
   describe 'relationships' do

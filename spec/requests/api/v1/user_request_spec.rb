@@ -14,7 +14,7 @@ describe "Users API" do
 
     users = JSON.parse(response.body, symbolize_names: true)[:data]
     expect(users.count).to eq(3)
-    expect(users.first[:attributes].count).to eq(7)
+    expect(users.first[:attributes].count).to eq(8)
   end
 
   it "returns empty when there are no users" do
@@ -46,6 +46,7 @@ describe "Users API" do
                     last_name: user1.last_name,
                     username: "fun",
                     password: "fun2",
+                    location: user1.location,
                     age: user1.age,
                     gender: user1.gender,
                     max_run_distance: user1.max_run_distance,
@@ -65,11 +66,12 @@ describe "Users API" do
     user_params = { first_name: user1.first_name,
                     last_name: user1.last_name,
                     age: user1.age,
+                    location: user1.location,
                     username: "fun",
                     password: "fun2",
                     gender: user1.gender,
                     max_run_distance: user1.max_run_distance}
-  
+
 
     post "/api/v1/users", params: user_params
 
@@ -85,6 +87,7 @@ describe "Users API" do
     user_params = { first_name: 'Alex',
                    last_name: user1.last_name,
                    username: user1.username,
+                   location: user1.location,
                    password: user1.password,
                    gender: user1.gender,
                    age: user1.age,
