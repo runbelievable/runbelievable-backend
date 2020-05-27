@@ -19,7 +19,7 @@ describe 'users runs API' do
 
     expect(response).to be_successful
     expect(users.count).to eq(2)
-    expect(users[0][:attributes].count).to eq(6)
+    expect(users[0][:attributes].count).to eq(7)
   end
 
   it "can find a specifc user by a run's id" do
@@ -60,13 +60,20 @@ describe 'users runs API' do
     expect(run.users.ids).to_not include(user1.id)
   end
 
-  xit "can update a run's user information" do
+  it "can update a run's user information" do
     run = create(:run)
     user1 = create(:user)
     run.users << [user1]
 
     previous_user_name = run.users.first.first_name
-    user_params = { first_name: 'Alex' }
+    user_params = { first_name: 'Alex',
+                   last_name: user1.last_name,
+                   username: user1.username,
+                   password: user1.password,
+                   gender: user1.gender,
+                   age: user1.age,
+                   estimated_mile_pace: user1.estimated_mile_pace,
+                   max_run_distance: user1.max_run_distance}
 
     put "/api/v1/runs/#{run.id}/users/#{user1.id}", params: user_params
 
