@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_213128) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "username"
+    t.string "password_digest"
     t.string "age"
     t.string "gender"
     t.integer "max_run_distance"

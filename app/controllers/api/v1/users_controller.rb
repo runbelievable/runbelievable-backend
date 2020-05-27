@@ -28,6 +28,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:first_name, :last_name, :age, :gender, :max_run_distance, :estimated_mile_pace)
+    params.permit(:first_name, :last_name, :username, :password, :age, :gender, :estimated_mile_pace, :max_run_distance)
   end
 end

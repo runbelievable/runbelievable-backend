@@ -15,6 +15,10 @@ Rails.application.routes.draw do
       put "/runs/:run_id/users/:user_id", to: 'run_users#update'
       post "/runs/:run_id/users", to: 'run_users#create'
 
+      get "/login", to: "sessions#new"
+      post "/login", to: "sessions#login"
+      get '/logout', to: 'sessions#logout'
+
       # scope module: 'users' do
       #   get "/runs", to: "user_runs#index"
       # end

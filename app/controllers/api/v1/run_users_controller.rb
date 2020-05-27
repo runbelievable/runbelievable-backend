@@ -12,7 +12,7 @@ class Api::V1::RunUsersController < ApplicationController
   end
 
   def update
-    render json: UserSerializer.new(User.update(params[:user_id], user_params))
+    render json: UserSerializer.new(Run.find(params[:run_id]).users.update(params[:user_id], user_params))
   end
 
   def create
@@ -28,6 +28,6 @@ class Api::V1::RunUsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:first_name, :last_name, :age, :gender, :estimated_mile_pace, :max_run_distance)
+    params.permit(:first_name, :last_name, :username, :password, :age, :gender, :estimated_mile_pace, :max_run_distance)
   end
 end
