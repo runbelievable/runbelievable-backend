@@ -12,7 +12,7 @@ class Api::V1::RunUsersController < ApplicationController
   end
 
   def update
-    render json: UserSerializer.new(User.update(params[:user_id], user_params))
+    render json: UserSerializer.new(Run.find(params[:run_id]).users.update(params[:user_id], user_params))
   end
 
   def create
