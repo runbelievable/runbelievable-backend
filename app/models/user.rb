@@ -14,4 +14,9 @@ class User < ApplicationRecord
   has_many :user_runs
   has_many :runs, through: :user_runs
 
+  def match
+    User.all
+        .where(location: location)
+        .order(:estimated_mile_pace)
+  end
 end
