@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    username { Faker::Creature::Dog.name }
+    username { Faker::Name.unique.name    }
     first_name { Faker::Creature::Cat.name }
     last_name { Faker::Creature::Dog.name }
     password { Faker::Creature::Dog.name }

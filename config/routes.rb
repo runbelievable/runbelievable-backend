@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :runs, only: [:index, :show, :create, :update, :destroy]
       resources :users, only: [:index, :show, :create, :update, :destroy]
+      get '/users/:user_id/find_runner', to: 'users#match_users'
       get '/users/:user_id/runs', to: 'user_runs#index'
       get '/users/:user_id/runs/:run_id', to: 'user_runs#show'
       delete '/users/:user_id/runs/:run_id', to: 'user_runs#destroy'
