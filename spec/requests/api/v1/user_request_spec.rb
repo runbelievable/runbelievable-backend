@@ -131,7 +131,6 @@ describe "Users API" do
                                     estimated_mile_pace: user1.estimated_mile_pace}
 
 
-    
     get "/api/v1/users/#{user1.id}/find_runner"
     
     expect(response).to be_successful
