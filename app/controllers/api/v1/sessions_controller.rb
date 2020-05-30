@@ -1,5 +1,7 @@
 class Api::V1::SessionsController < ApplicationController
-    def new 
+    skip_before_action :verify_authenticity_token
+    
+    def new
       user = User.find_by(username: params[:username])
       if user
         redirect_to "/api/v1/users/#{user.id}"
@@ -14,7 +16,7 @@ class Api::V1::SessionsController < ApplicationController
         login_failed
       end
     end
-    
+
     def logout
       session.delete(:current_user_id)
       render json: {logout_message: "You have been logged out"}, status: 201
@@ -22,7 +24,7 @@ class Api::V1::SessionsController < ApplicationController
 
 private
   def login_sucsess(user)
-    session[:current_user_id] = user.id 
+    session[:current_user_id] = user.id
     render json: UserSerializer.new(user), status: 201
   end
 

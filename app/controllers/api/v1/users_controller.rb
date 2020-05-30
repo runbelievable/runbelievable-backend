@@ -25,9 +25,9 @@ class Api::V1::UsersController < ApplicationController
     render json: UserSerializer.new(User.destroy(params[:id]))
   end
 
-  def match_users 
-    if current_user 
-      users = current_user.match 
+  def match_users
+    if current_user
+      users = current_user.match
     end
     render json: UserSerializer.new(users)
   end
