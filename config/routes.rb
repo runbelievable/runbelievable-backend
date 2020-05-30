@@ -3,6 +3,15 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :runs, only: [:index, :show, :create, :update, :destroy]
       resources :users, only: [:index, :show, :create, :update, :destroy]
+      # Message routes 
+      get '/users/:user_id/messages', to: 'messages#index' #all of users messages in and out 
+      get '/users/:user_id/inbox', to: 'messages#inbox' #all of users recived messages
+      get '/users/:user_id/outbox', to: 'messages#outbox' #all of users recived messages
+      get '/users/:user_id/messages/:message_id', to: 'messages#show_msg_conversation' #all of users recived messages
+      post '/users/:user_id/messages/:message_id', to: 'messages#reply_to_message' #all of users recived messages
+      post '/users/:user_id/messages', to: 'messages#start_message_conv' #start a new converstation 
+
+
       get '/users/:user_id/find_runner', to: 'users#match_users'
       get '/users/:user_id/runs', to: 'user_runs#index'
       get '/users/:user_id/runs/:run_id', to: 'user_runs#show'
