@@ -106,3 +106,10 @@ user3.runs.create(distance: 3,
     location: 'Denver',
     total_time: '20:00',
     average_pace: '10:00')
+
+#Messages
+msg1 = user1.send_message(user2, {topic:"RE: Fun day", body: "Hey lisa, Im exicited for a fun day of hiking and running!"})
+msg2 = msg1.reply({topic:"RE: Fun day", body: "Hey Billy, Im exicited too!! cant wait for the mtns!"})
+msg3 = msg2.reply({topic:"RE: Fun day", body: "Cool Lisa! -billy"})
+
+msg4 = user2.send_message(user1, {topic:"I have dog for sale", body: "I know you like dogs, want to buy one? "})
