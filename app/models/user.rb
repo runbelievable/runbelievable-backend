@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates_presence_of :location
 
   has_secure_password
+  acts_as_messageable :required => :body
 
   has_many :user_runs
   has_many :runs, through: :user_runs
