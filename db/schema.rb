@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_21_213128) do
+ActiveRecord::Schema.define(version: 2020_05_30_174031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "messages", id: :serial, force: :cascade do |t|
+    t.string "topic"
+    t.text "body"
+    t.string "received_messageable_type"
+    t.bigint "received_messageable_id"
+    t.string "sent_messageable_type"
+    t.bigint "sent_messageable_id"
+    t.boolean "opened", default: false
+    t.boolean "recipient_delete", default: false
+    t.boolean "sender_delete", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "ancestry"
+    t.boolean "recipient_permanent_delete", default: false
+    t.boolean "sender_permanent_delete", default: false
+    t.datetime "opened_at"
+    t.index ["ancestry"], name: "index_messages_on_ancestry"
+    t.index ["received_messageable_id", "received_messageable_type"], name: "acts_as_messageable_received"
+    t.index ["sent_messageable_id", "received_messageable_id"], name: "acts_as_messageable_ids"
+    t.index ["sent_messageable_id", "sent_messageable_type"], name: "acts_as_messageable_sent"
+  end
 
   create_table "runs", force: :cascade do |t|
     t.float "distance"
