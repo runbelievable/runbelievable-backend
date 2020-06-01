@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :runs, only: [:index, :show, :create, :update, :destroy]
       resources :users, only: [:index, :show, :create, :update, :destroy]
+      post '/users-registration', to: "users#register"
       # Message routes 
       get '/users/:user_id/messages', to: 'messages#index' #all of users messages in and out 
       get '/users/:user_id/inbox', to: 'messages#inbox' #all of users recived messages
