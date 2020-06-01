@@ -29,6 +29,9 @@ Rails.application.routes.draw do
       post "/login", to: "sessions#login"
       get '/logout', to: 'sessions#logout'
 
+      # hiking response
+      get "/users/:user_id/random_trail", to: "hiking#show" 
+
       # scope module: 'users' do
       #   get "/runs", to: "user_runs#index"
       # end
