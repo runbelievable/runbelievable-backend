@@ -1,4 +1,6 @@
-class Api::V1::MessagesController < ApplicationController 
+class Api::V1::MessagesController < ApplicationController
+    skip_before_action :verify_authenticity_token
+    
     def index 
         render json: MessagesSerializer.new(current_user.messages)
     end
@@ -6,7 +8,7 @@ class Api::V1::MessagesController < ApplicationController
     def inbox #all recived messages 
         render json: MessagesSerializer.new(current_user.received_messages)
     end
-
+    
     def outbox #all sent messages 
         render json: MessagesSerializer.new(current_user.sent_messages) 
     end
@@ -17,9 +19,10 @@ class Api::V1::MessagesController < ApplicationController
     end 
 
     def show_msg_conversation 
-        render json: MessagesSerializer.new(current_user.messages.find_by(id: params[:message_id]).conversation) 
+        conversation_msgs = current_user.messages.find_by(id: params[:message_id]).conversation
+        render json: MessagesSerializer.new(conversation_msgs) 
     end
-
+    
     def start_message_conv #Post to start message convo 
         recipient = User.find_by(username: params[:username])
         new_message = current_user.send_message(recipient, {topic: params[:topic], body: params[:body]})
