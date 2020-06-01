@@ -17,6 +17,17 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def register
+    user = User.new(user_params)
+    if user.save
+      session[:current_user_id] = user.id
+      render json: UserSerializer.new(User.create(user_params)), status: 201
+    else
+      user_message = FailedUser.new(user)
+      render json: FailedSerializer.new(user_message), status: 401
+    end
+  end
+
   def update
     render json: UserSerializer.new(User.update(params[:id], user_params))
   end
