@@ -166,4 +166,31 @@ describe "Users API" do
     resp[:attributes][:username] = "jane"
     resp[:attributes][:estimated_mile_pace] = "08:00"
   end
+
+  # it "A user can be created and logged in at the same time, but bad pass no login" do
+  #   user1 = create(:user, username: "jane", location: "denver", estimated_mile_pace: "08:00")
+  #   user2 = create(:user, username: "billy", location: "denver", estimated_mile_pace: "06:00")
+  #   user3 = create(:user, username: "Bobith", location: "denver", estimated_mile_pace: "05:00")
+  #   user4 = create(:user, location: "timbocktu")
+  #   user5 = create(:user, location: "No where ")
+  #
+  #   post '/api/v1/users-registration', params: { first_name: user1.first_name,
+  #                                   last_name: user1.last_name,
+  #                                   age: user1.age,
+  #                                   username: user1.username,
+  #
+  #                                   location: user1.location,
+  #                                   max_run_distance: user1.max_run_distance,
+  #                                   estimated_mile_pace: user1.estimated_mile_pace}
+  #
+  #
+  #   get "/api/v1/users/#{user1.id}"
+  #
+  #   expect(response).to be_successful
+  #   resp = JSON.parse(response.body, symbolize_names: true)[:data]
+  #   binding.pry
+  #   resp[:attributes][:location] = "denver"
+  #   resp[:attributes][:username] = "jane"
+  #   resp[:attributes][:estimated_mile_pace] = "08:00"
+  # end
 end
