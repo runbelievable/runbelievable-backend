@@ -34,7 +34,7 @@ It also has specialized endpoints for:
  
  https://run-be-microservice.herokuapp.com/
  
- Hit the endpoint '/recommended-hikes' by using that key/value of location in the query params to get a random hike/running  trail near your current location
+ Hit the endpoint '/recommended-hikes' by using the key/value of location in the query params to get a random hike/running  trail near your current location.
  
 ## Work on this project yourself!
 -To get started, please visit https://github.com/runbelievable/runbelievable-backend clone this project to your local machine!
