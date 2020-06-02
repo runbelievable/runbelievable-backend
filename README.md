@@ -1,9 +1,4 @@
-# runbelievable-backend
-Runbelievable is an app that was created to enhance the safety and experience of trail running by matching like-minded and like-abilitied people together for a great trail running experience. 
-
-This application is the culmination of three applications but we will stick with discussing the functionality provided by the Back End and the microservice that was created and consumed by the the Back End team. 
-
-
+# Runbelievable-backend
 
 ## Background and Description
 
@@ -20,7 +15,7 @@ This application is the culmination of three applications but we will stick with
 Start hitting our user and run endpoints, hassle-free, by visiting https://run-be.herokuapp.com/
 
 ## Work on this project yourself!
--To get started, please visit https://github.com/runbelievable/runbelievable-backend and clone this project to your local machine!
+-To get started, please visit https://github.com/runbelievable/runbelievable-backend fork and clone this project to your local machine!
 
 -Once you are on the site, look for the green 'Clone or Download' button on the right side of the web page.
 
