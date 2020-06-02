@@ -1,5 +1,7 @@
 # Runbelievable-backend
 
+![image](https://user-images.githubusercontent.com/52808022/83552326-cee7d080-a4c6-11ea-8c50-525c2fce399f.png)
+
 ## Background and Description
 
 "Runbelievable" is an app that was created to enhance the safety and experience of trail running by matching like-minded and like-abilitied people together for a great trail running experience. 
@@ -57,11 +59,11 @@ You can now move in to the project directory and open it from your text editor.
 ## User for Runbelievable
 When registering, fill in all the fields with your information and remember, your username must be unique!
 
-Gif*
+![image](https://user-images.githubusercontent.com/52808022/83552407-f0e15300-a4c6-11ea-8085-6f524983ed5d.png)
 
 Using a unique username allows you to register and view your profile page.
 
-*image
+![image](https://user-images.githubusercontent.com/52808022/83552445-035b8c80-a4c7-11ea-88b2-629f4f29ab17.png)
 
 ### Rails
 * Create routes for namespaced routes
