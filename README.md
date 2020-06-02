@@ -34,7 +34,7 @@ It also has specialized endpoints for:
 
 Next, copy the SSH Key after you have pressed the green 'Clone or Download' button.
 
-![Screen Shot 2020-02-25 at 11 42 13 AM](https://user-images.githubusercontent.com/52808022/75276756-02c6a200-57c4-11ea-9026-aa60d1ff1e62.png)
+![image](https://user-images.githubusercontent.com/52808022/83550110-8da1f180-a4c3-11ea-959c-5ef198f6363d.png)
 
 Then, go to the directory in your temrinal where you would like
 this project to be. Type in 'git clone' and the paste the copied SSH key in to your terminal before pressing enter.
