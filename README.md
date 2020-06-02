@@ -47,10 +47,6 @@ Using a unique username allows you to register and view your profile page.
 * Use BCrypt to hash user passwords before storing in the database
 * Use filters (e.g. `before_action`) in a Rails controller
 
-![image](https://user-images.githubusercontent.com/52808022/75459751-b2734f80-593d-11ea-9f36-6881e76ea8e0.png)
-
-* This functionality limits user access depending on their user role.
-
 ## Application Resources
 
 - Uses Rails 5.2.x
@@ -63,11 +59,6 @@ Using a unique username allows you to register and view your profile page.
 
 - To use FactoryBot to speed up your test development
 - To use "rails generators" to speed up your app development
-
-## Permission
-
-- If there is a specific gem you'd like to use in the project, please get permission from the creators first.
-
 
 ## Contributors and links to their Github Repositories:
 
