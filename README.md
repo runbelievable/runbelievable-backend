@@ -39,7 +39,7 @@ Next, copy the SSH Key after you have pressed the green 'Clone or Download' butt
 Then, go to the directory in your temrinal where you would like
 this project to be. Type in 'git clone' and the paste the copied SSH key in to your terminal before pressing enter.
 
-Image*
+![image](https://user-images.githubusercontent.com/52808022/83549831-271cd380-a4c3-11ea-84cd-4ddc5cd9c007.png)
 
 You can now move in to the project directory and open it from your text editor.
 
