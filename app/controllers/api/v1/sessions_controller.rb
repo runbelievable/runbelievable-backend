@@ -1,11 +1,7 @@
 class Api::V1::SessionsController < ApplicationController
     skip_before_action :verify_authenticity_token
-    
+
     def new
-      user = User.find_by(username: params[:username])
-      if user
-        redirect_to "/api/v1/users/#{user.id}"
-      end
     end
 
     def login
