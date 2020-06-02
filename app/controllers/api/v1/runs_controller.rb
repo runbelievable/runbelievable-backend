@@ -1,4 +1,5 @@
 class Api::V1::RunsController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def index
     render json: RunSerializer.new(Run.all)
