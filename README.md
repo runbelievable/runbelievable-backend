@@ -30,9 +30,11 @@ It also has specialized endpoints for:
  
  ![image](https://user-images.githubusercontent.com/52808022/83551036-02296000-a4c5-11ea-8bc0-7907e4892300.png)
  
- If you would like to use this application yourself, please follow the guidelines provided below in the section, "Work on this project yourself!" after visiting:
+ If you would like to use this application yourself, please follow the guidelines provided below in the section, "Work on this project yourself!" visit:
  
- https://run-be-microservice.herokuapp.com/
+ https://run-be-microservice.herokuapp.com/recommend-hikes
+ 
+ Use the key/value of location in the query params to get a random hike/running trail near your current location.
  
 ## Work on this project yourself!
 -To get started, please visit https://github.com/runbelievable/runbelievable-backend clone this project to your local machine!
