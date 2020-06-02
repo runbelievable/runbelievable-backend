@@ -25,7 +25,8 @@ class Api::V1::MessagesController < ApplicationController
     
     def start_message_conv #Post to start message convo 
         recipient = User.find_by(username: params[:username])
-        new_message = current_user.send_message(recipient, {topic: params[:topic], body: params[:body]})
+        user = User.find(params[:user_id])
+        new_message = user.send_message(recipient, {topic: params[:topic], body: params[:body]})
         render json: MessagesSerializer.new(new_message) 
     end
 
