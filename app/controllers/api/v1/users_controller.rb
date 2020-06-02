@@ -18,7 +18,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def register
-    user = User.new(user_params)
+    user = User.create(user_params)
     if user.save
       session[:current_user_id] = user.id
       render json: UserSerializer.new(User.create(user_params)), status: 201
