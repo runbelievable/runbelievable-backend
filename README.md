@@ -30,7 +30,7 @@ It also has specialized endpoints for:
 
 -Once you are on the site, look for the green 'Clone or Download' button on the right side of the web page.
 
-![image](https://user-images.githubusercontent.com/52808022/83550110-8da1f180-a4c3-11ea-959c-5ef198f6363d.png)
+![image](https://user-images.githubusercontent.com/52808022/83550324-e4a7c680-a4c3-11ea-9e4b-43ff12f5db18.png)
 
 Next, copy the SSH Key after you have pressed the green 'Clone or Download' button.
 
