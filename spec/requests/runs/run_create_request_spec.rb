@@ -14,7 +14,7 @@ describe "Runs API create functionality" do
                         location: run.location,
                         total_time: run.total_time,
                         average_pace: run.average_pace
-    }
+                        }
 
     expect(response).to be_successful
 
@@ -22,7 +22,7 @@ describe "Runs API create functionality" do
     expect(run_json[:attributes].count).to eq(4)
     expect(run_json[:attributes][:average_pace]).to eq("08:00")
     expect(path).to eq( "/api/v1/runs")
-  end 
+  end
 
   it "posting invalid params to create a user returns error" do
     create_list(:run, 3)
