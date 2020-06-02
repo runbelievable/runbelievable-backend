@@ -24,6 +24,15 @@ Our API has the following RESTful resources namespaced under api/v1:
 It also has specialized endpoints for:
   - Random trail provider based on user's location
   - Messaging between two users
+  
+# Sinatra MicroService consumption
+ - We created a a microservice for the user of taking in a user's location, turing that locaion into lat and long coordinates and using those coordinates to find running trails in the user's area.
+ 
+ ![image](https://user-images.githubusercontent.com/52808022/83551036-02296000-a4c5-11ea-8bc0-7907e4892300.png)
+ 
+ If you would like to use this application yourself, please follow the guidelines provided above after visiting:
+ 
+ https://run-be-microservice.herokuapp.com/
  
 ## Work on this project yourself!
 -To get started, please visit https://github.com/runbelievable/runbelievable-backend clone this project to your local machine!
