@@ -26,7 +26,7 @@ It also has specialized endpoints for:
   - Messaging between two users
  
 ## Work on this project yourself!
--To get started, please visit https://github.com/runbelievable/runbelievable-backend fork and clone this project to your local machine!
+-To get started, please visit https://github.com/runbelievable/runbelievable-backend clone this project to your local machine!
 
 -Once you are on the site, look for the green 'Clone or Download' button on the right side of the web page.
 
