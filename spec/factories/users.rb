@@ -9,7 +9,5 @@ FactoryBot.define do
     max_run_distance { rand(1..50) }
     estimated_mile_pace { ['10:00', '08:00', '09:00', '07:00', '06:00', '05:00'].shuffle.pop }
     location { Faker::Address.city }
-
-    # role { :default }
   end
 end

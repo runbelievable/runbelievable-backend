@@ -1,5 +1,5 @@
 class Api::V1::RunsController < ApplicationController
-  
+
   def index
     render json: RunSerializer.new(Run.all)
   end
@@ -28,7 +28,8 @@ class Api::V1::RunsController < ApplicationController
   end
 
   private
-  def run_params 
+  
+  def run_params
       params.permit(:distance, :location, :total_time, :average_pace)
   end
 end

@@ -55,7 +55,6 @@ RSpec.describe 'User registration endpoint' do
     post '/api/v1/login', params: {username: user.username, password: "hi"}
 
     expect(response).to_not be_successful
-    user_resp = User.last
     expect(session[:current_user_id]).to eq(nil)
   end
 
