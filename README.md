@@ -9,7 +9,7 @@ This application is the culmination of three applications but we will stick with
 ### Many-to-Many
 * This project utilizes a many-to-many relationships, connecting multiple tables in our database for an easier user experience.
 
-![image](https://user-images.githubusercontent.com/52808022/75277723-cc8a2200-57c5-11ea-89be-5e897431213d.png)
+![image](https://files.slack.com/files-pri/T029P2S9M-F014W27FFNG/screen_shot_2020-06-02_at_12.06.23_pm.png)
 
 ## Access
 Start hitting our user and run endpoints, hassle-free, by visiting https://run-be.herokuapp.com/
