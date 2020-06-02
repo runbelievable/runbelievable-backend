@@ -6,7 +6,7 @@
 
 "Runbelievable" is an app that was created to enhance the safety and experience of trail running by matching like-minded and like-abilitied people together for a great trail running experience. 
 
-This application is the culmination of three applications but we will stick with discussing the functionality provided by the Back End and the microservice that was created and consumed by the the Back End team. 
+This application is the culmination of three applications but we will stick with discussing the functionality provided by the Back End application and the MicroService that was created by the Back End team and consumed by the Back End application. 
 
 ### Many-to-Many
 * This project utilizes a many-to-many relationships, connecting multiple tables in our database for an easier user experience.
