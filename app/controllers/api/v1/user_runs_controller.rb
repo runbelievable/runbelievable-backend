@@ -1,5 +1,6 @@
 class Api::V1::UserRunsController < ApplicationController
-  
+  skip_before_action :verify_authenticity_token
+
   def index
     render json: RunSerializer.new(User.find(params[:user_id]).runs)
   end
