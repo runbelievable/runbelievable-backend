@@ -6,7 +6,7 @@
 
 This application is the culmination of three applications but we will stick with discussing the functionality provided by the Back End and the microservice that was created and consumed by the the Back End team. 
 
-### Many-to-Many and One-to-Many Relationships
+### Many-to-Many
 * This project utilizes a many-to-many relationships, connecting multiple tables in our database for an easier user experience.
 
 ![image](https://user-images.githubusercontent.com/52808022/75277723-cc8a2200-57c5-11ea-89be-5e897431213d.png)
