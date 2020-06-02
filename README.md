@@ -15,12 +15,15 @@ This application is the culmination of three applications but we will stick with
 Start hitting our user and run endpoints, hassle-free, by visiting https://run-be.herokuapp.com/
 
 # Endpoints provided by runbelievable-backend
-*Our API has the following RESTful resources namespaced under api/v1:
+Our API has the following RESTful resources namespaced under api/v1:
   - Users
   - Runs
   - User-runs
-  - Runs-users
+  - Run-users
+  
+It also has specialized endpoints for:
   - Random trail provider based on user's location
+  - Messaging between two users
  
 ## Work on this project yourself!
 -To get started, please visit https://github.com/runbelievable/runbelievable-backend fork and clone this project to your local machine!
@@ -36,7 +39,7 @@ Next, copy the SSH Key after you have pressed the green 'Clone or Download' butt
 Then, go to the directory in your temrinal where you would like
 this project to be. Type in 'git clone' and the paste the copied SSH key in to your terminal before pressing enter.
 
-![Screen Shot 2020-02-25 at 11 48 02 AM](https://user-images.githubusercontent.com/52808022/75277652-a2386480-57c5-11ea-935e-af97b41d8bbb.png)
+Image*
 
 You can now move in to the project directory and open it from your text editor.
 
