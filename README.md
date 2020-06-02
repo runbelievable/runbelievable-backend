@@ -26,11 +26,11 @@ It also has specialized endpoints for:
   - Messaging between two users
   
 # Sinatra MicroService consumption
- - We created a a microservice for the user of taking in a user's location, turing that locaion into lat and long coordinates and using those coordinates to find running trails in the user's area.
+ - We created a a microservice for the user by taking in a user's location, turning that location into lat and long coordinates and using those coordinates to find running trails in the user's area.
  
  ![image](https://user-images.githubusercontent.com/52808022/83551036-02296000-a4c5-11ea-8bc0-7907e4892300.png)
  
- If you would like to use this application yourself, please follow the guidelines provided above after visiting:
+ If you would like to use this application yourself, please follow the guidelines provided below in the section, "Work on this project yourself!" after visiting:
  
  https://run-be-microservice.herokuapp.com/
  
