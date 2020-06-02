@@ -9,11 +9,19 @@ This application is the culmination of three applications but we will stick with
 ### Many-to-Many
 * This project utilizes a many-to-many relationships, connecting multiple tables in our database for an easier user experience.
 
-![image](https://files.slack.com/files-pri/T029P2S9M-F014W27FFNG/screen_shot_2020-06-02_at_12.06.23_pm.png)
+![image](https://user-images.githubusercontent.com/52808022/83548986-ce990680-a4c1-11ea-9b8d-ff522c30f20b.png)
 
 ## Access
 Start hitting our user and run endpoints, hassle-free, by visiting https://run-be.herokuapp.com/
 
+# Endpoints provided by runbelievable-backend
+*Our API has the following RESTful resources namespaced under api/v1:
+  - Users
+  - Runs
+  - User-runs
+  - Runs-users
+  - Random trail provider based on user's location
+ 
 ## Work on this project yourself!
 -To get started, please visit https://github.com/runbelievable/runbelievable-backend fork and clone this project to your local machine!
 
@@ -32,14 +40,14 @@ this project to be. Type in 'git clone' and the paste the copied SSH key in to y
 
 You can now move in to the project directory and open it from your text editor.
 
-## User Roles for Monster Shop
+## User for Runbelievable
 When registering, fill in all the fields with your information and remember, your username must be unique!
 
 Gif*
 
 Using a unique username allows you to register and view your profile page.
 
-![](https://media.giphy.com/media/YPQHMVcdurJHilF5TW/giphy.gif)
+*image
 
 ### Rails
 * Create routes for namespaced routes
