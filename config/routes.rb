@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get '/users/:user_id/inbox', to: 'messages#inbox' #all of users recived messages
       get '/users/:user_id/outbox', to: 'messages#outbox' #all of users recived messages
       get '/users/:user_id/messages/:message_id', to: 'messages#show_msg_conversation' #all of users recived messages
+      get '/users/:user_id/message-conversations/:username', to: 'messages#conversation_between' #all of users recived messages
       post '/users/:user_id/messages/:message_id', to: 'messages#reply_to_message' #all of users recived messages
       post '/users/:user_id/messages', to: 'messages#start_message_conv' #start a new converstation
 
