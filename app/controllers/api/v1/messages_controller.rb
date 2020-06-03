@@ -6,7 +6,8 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def inbox #all recived messages
-      render json: MessagesSerializer.new(current_user.received_messages)
+      user = User.find(params[:user_id])
+      render json: MessagesSerializer.new(user.received_messages)
   end
 
   def outbox #all sent messages
@@ -14,7 +15,9 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def reply_to_message #rely to a specific person
-      reply_msg = current_user.messages.find_by(id: params[:message_id]).reply({topic: params[:topic], body: params[:body]})
+     user = User.find(params[:user_id])
+
+      reply_msg = user.messages.find_by(id: params[:message_id]).reply({topic: params[:topic], body: params[:body]})
       render json: MessagesSerializer.new(reply_msg.conversation)
   end
 
