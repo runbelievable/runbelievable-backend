@@ -87,4 +87,12 @@ describe 'As a user I can send a message to another user' do
     expect(x[:attributes].count).to eq(6)
     expect(@user1.id).to_not eq(x[:attributes][:received_messageable_id])
   end
+
+  it "user see messages between them and specific other user" do
+
+    get "/api/v1/users/#{@user1.id}/message-conversations/#{@user2.username}"
+
+    x = JSON.parse(response.body, symbolize_names:true)[:data]
+    expect(x.count).to eq(2)
+  end
 end
